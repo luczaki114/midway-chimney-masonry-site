@@ -1,0 +1,162 @@
+/* ============================================================================
+ * Midway Chimney & Masonry — Tailwind v4 + shadcn bridge
+ * ----------------------------------------------------------------------------
+ * Drop this into your app's CSS entry, AFTER `@import "tailwindcss";` and after
+ * shadcn's generated `:root` / `@theme inline` block. It does two jobs:
+ *
+ *   LAYER 1 — Reskins shadcn's base-flavor variables to Midway values, so your
+ *             existing shadcn components (Button, Input, Select, Dialog, …) inherit
+ *             the brand for free. This is the "floor": sane, consistent defaults
+ *             you don't want to be creative about (focus rings, radius, a11y).
+ *
+ *   LAYER 2 — Adds an ADDITIVE Midway namespace via @theme, generating brand
+ *             utilities (bg-fire, font-display, rounded-card, text-on-dark, …)
+ *             for the expressive stuff shadcn has no slot for. This is the
+ *             "ceiling": compose freely when the copy defines a new shape.
+ *
+ * Utilities always win over component defaults, so Layer 1 never costs you
+ * flexibility — `className="bg-near-black rounded-none"` overrides any default.
+ *
+ * The Midway design system stays the source of truth; this file is just the
+ * adapter between its tokens and your Tailwind/shadcn workflow.
+ * ========================================================================== */
+
+
+/* ----------------------------------------------------------------------------
+ * LAYER 1 — shadcn base-flavor variable contract, Midway-ized.
+ * Paste these values over shadcn's defaults (replace, don't duplicate).
+ * Hex is kept for brand fidelity; convert to oklch if your setup prefers it.
+ * -------------------------------------------------------------------------- */
+:root {
+  --radius: 6px;                  /* Midway: 6px soft corners, never pill */
+
+  --background:            #F7F5F1; /* warm off-white */
+  --foreground:            #2E2926; /* warm body */
+
+  --card:                  #F7F5F1; /* cards are off-white; the border separates them */
+  --card-foreground:       #2E2926;
+  --popover:               #F7F5F1;
+  --popover-foreground:    #2E2926;
+
+  --primary:               #C41E2E; /* fire red — CTAs, key actions */
+  --primary-foreground:    #F7F5F1;
+
+  --secondary:             #E8E5E1; /* quiet warm button */
+  --secondary-foreground:  #2E2926;
+
+  --muted:                 #E8E5E1;
+  --muted-foreground:      #8A8380; /* warm mid-gray — large text only */
+
+  --accent:                #EDEAE5; /* hover bg for menu/ghost items */
+  --accent-foreground:     #2E2926;
+
+  --destructive:           #8C2A1C; /* oxblood — distinct hue from --primary */
+  --destructive-foreground:#F7F5F1;
+
+  --border:                #DAD5CE; /* light warm hairline for cards/separators at scale */
+  --input:                 #8A8380; /* the brief's explicit form-field border (mid-gray) */
+  --ring:                  #C41E2E; /* fire-red focus ring, 2px offset via shadcn */
+
+  /* Optional: chart palette in the warm family (no navy) */
+  --chart-1: #C41E2E;
+  --chart-2: #8C2A1C;
+  --chart-3: #8A8380;
+  --chart-4: #2E2926;
+  --chart-5: #C9A227;
+}
+
+/* Dark sections / dark mode — near-black ground, off-white ink. */
+.dark {
+  --background:            #1C1714;
+  --foreground:            #F7F5F1;
+  --card:                  #24201C;
+  --card-foreground:       #F7F5F1;
+  --popover:               #24201C;
+  --popover-foreground:    #F7F5F1;
+  --primary:               #C41E2E;
+  --primary-foreground:    #F7F5F1;
+  --secondary:             #2A2420;
+  --secondary-foreground:  #F7F5F1;
+  --muted:                 #2A2420;
+  --muted-foreground:      #C9C3BD;
+  --accent:                #2A2420;
+  --accent-foreground:     #F7F5F1;
+  --destructive:           #B5402E; /* lifted oxblood for contrast on dark */
+  --destructive-foreground:#F7F5F1;
+  --border:                rgb(247 245 241 / 0.14);
+  --input:                 rgb(247 245 241 / 0.24);
+  --ring:                  #C41E2E;
+}
+
+
+/* ----------------------------------------------------------------------------
+ * LAYER 2 — Additive Midway namespace.
+ * Generates: bg-fire / text-fire, bg-near-black, bg-off-white, text-body,
+ * text-mid-gray, text-on-dark, bg-danger, font-display, font-sans,
+ * rounded-card, tracking-eyebrow, shadow-nav, ease-deliberate.
+ * These are the brand's expressive primitives — use them when hand-building.
+ * -------------------------------------------------------------------------- */
+@theme {
+  /* Brand colors as first-class utilities (additive — does not touch shadcn) */
+  --color-fire:          #C41E2E;
+  --color-fire-hover:    #A01824;
+  --color-fire-active:   #8A1420;
+  --color-near-black:    #1C1714;
+  --color-off-white:     #F7F5F1;
+  --color-body:          #2E2926;
+  --color-mid-gray:      #8A8380;
+  --color-on-dark:       #F7F5F1;
+  --color-on-dark-muted: #C9C3BD;
+  --color-danger:        #8C2A1C; /* destructive as a utility too */
+  --color-danger-hover:  #73200F;
+
+  /* Type — Playfair for display, Inter for everything else */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans:    "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Radius + the brand's eyebrow tracking */
+  --radius-card:      6px;
+  --tracking-eyebrow: 0.15em;
+
+  /* Motion — deliberate ease-in-out, 250–300ms */
+  --ease-deliberate: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* The single shadow in the system (sticky nav, scrolled) */
+  --shadow-nav: 0 2px 12px rgb(28 23 20 / 0.15);
+}
+
+
+/* ----------------------------------------------------------------------------
+ * Brand component helpers that can't be expressed as a single utility.
+ * Optional — use where the markup is repetitive.
+ * -------------------------------------------------------------------------- */
+@layer components {
+  /* Tracked uppercase eyebrow label */
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-eyebrow);
+    color: var(--muted-foreground);
+  }
+
+  /* Full-bleed photo with the mandatory warm overlay (40–55%).
+   * Usage: <div class="photo-frame" style="background-image:url(...)">…</div>
+   * Children render above the overlay automatically. */
+  .photo-frame {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .photo-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(28 23 20 / 0.50);
+  }
+  .photo-frame > * {
+    position: relative;
+    z-index: 1;
+  }
+}

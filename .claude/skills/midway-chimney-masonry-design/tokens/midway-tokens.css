@@ -1,0 +1,110 @@
+/* ============================================================================
+ * Midway Chimney & Masonry — Design Tokens (framework-agnostic)
+ * ----------------------------------------------------------------------------
+ * The raw brand values as CSS custom properties. Link this anywhere for the
+ * variables. For a Tailwind v4 + shadcn project you usually don't need this
+ * file directly — use `tailwind.css` (the bridge) instead, which carries these
+ * same values into shadcn's variable contract and Tailwind's @theme.
+ *
+ * Fonts load from Google Fonts. Swap for self-hosted @font-face if you bundle
+ * the .woff2 binaries.
+ * ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap');
+
+:root {
+  /* ---- Color · warm temperatures only, NO navy anywhere ---- */
+  --warm-near-black: #1C1714; /* dark sections, footer, photo overlays (brown undertone) */
+  --warm-off-white:  #F7F5F1; /* light sections, cards (slight cream) */
+  --fire-red:        #C41E2E; /* PRIMARY accent — CTAs, prices, key highlights ONLY */
+  --fire-red-hover:  #A01824; /* hover — deepens (never lightens) */
+  --fire-red-active: #8A1420; /* pressed — one step darker than hover */
+  --warm-body:       #2E2926; /* body copy on light */
+  --warm-mid-gray:   #8A8380; /* captions, secondary labels, dividers, form borders */
+  --warm-disabled-bg:#E8E5E1; /* disabled field background */
+
+  /* Destructive — a distinct WARM hue from fire red (brick/oxblood, leans
+   * orange-brown where fire red leans crimson). Irreversible/danger actions only;
+   * form-error borders stay fire red. */
+  --destructive:       #8C2A1C;
+  --destructive-hover: #73200F;
+  --destructive-on:    #F7F5F1;
+
+  /* ---- Semantic aliases ---- */
+  --surface-dark:       var(--warm-near-black);
+  --surface-light:      var(--warm-off-white);
+  --surface-card:       var(--warm-off-white);
+  --surface-disabled:   var(--warm-disabled-bg);
+  --text-body:          var(--warm-body);
+  --text-heading:       var(--warm-near-black);
+  --text-secondary:     var(--warm-mid-gray); /* large text / captions only — fails AA at body size */
+  --text-on-dark:       var(--warm-off-white);
+  --text-on-dark-muted: #C9C3BD;
+  --accent:             var(--fire-red);
+  --link:               var(--fire-red);
+  --border-hairline:    var(--warm-mid-gray);
+  --border-input:       var(--warm-mid-gray);
+  --focus-ring:         var(--fire-red);
+
+  /* Warm photo overlay — apply over ALL photo backgrounds (40–55%) */
+  --photo-overlay:       rgb(28 23 20 / 0.50);
+  --photo-overlay-soft:  rgb(28 23 20 / 0.42);
+  --photo-overlay-heavy: rgb(28 23 20 / 0.62);
+
+  /* ---- Type ---- */
+  --font-serif-display: 'Playfair Display', Georgia, 'Times New Roman', serif; /* headlines, numbers, quotes — Regular & Bold only, never thin */
+  --font-body:          'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; /* body, UI — 16px base, 1.6 lh, never below 15px */
+
+  --weight-light:    300; /* eyebrows only */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+
+  --text-display: 4.5rem;   /* 72px — display numbers / hero figures */
+  --text-h1:      3.25rem;  /* 52px */
+  --text-h2:      2.25rem;  /* 36px */
+  --text-h3:      1.5rem;   /* 24px */
+  --text-h4:      1.25rem;  /* 20px */
+  --text-lead:    1.25rem;  /* 20px */
+  --text-base:    1rem;     /* 16px — body default */
+  --text-sm:      0.9375rem;/* 15px — body minimum */
+  --text-caption: 0.875rem; /* 14px — captions, form errors */
+  --text-eyebrow: 0.75rem;  /* 12px — tracked eyebrow */
+
+  --leading-tight: 1.1;
+  --leading-snug:  1.25;
+  --leading-body:  1.6;
+  --tracking-eyebrow: 0.15em;
+
+  /* ---- Spacing (8px base) ---- */
+  --space-1: 0.25rem;  --space-2: 0.5rem;  --space-3: 0.75rem; --space-4: 1rem;
+  --space-5: 1.5rem;   --space-6: 2rem;    --space-7: 3rem;    --space-8: 3.5rem;
+  --space-9: 4rem;     --space-10: 6rem;
+
+  --content-max:  1280px;
+  --grid-gutter:  1.5rem; /* 24px */
+  --section-pad-y-desktop: 6rem;   /* 96px */
+  --section-pad-y-mobile:  3.5rem; /* 56px */
+
+  /* ---- Radius · soft, never pill ---- */
+  --radius-card:  6px;  /* cards + buttons */
+  --radius-input: 6px;
+  --radius-photo: 0;    /* full-bleed photos: never rounded */
+
+  /* ---- Borders ---- */
+  --border-width-hairline: 1px;
+  --border-width-strong:   2px; /* fire-red rule — 1–2 per page max */
+
+  /* ---- Motion · deliberate, never playful ---- */
+  --motion-duration:    250ms; /* 250–300ms across the board */
+  --motion-duration-lg: 300ms;
+  --motion-ease:        ease-in-out; /* no linear, no bounce */
+
+  /* ---- Shadow · the ONLY shadow in the system (sticky nav, scrolled) ---- */
+  --shadow-nav: 0 2px 12px rgb(28 23 20 / 0.15);
+
+  /* ---- Focus ---- */
+  --focus-outline-width:  2px;
+  --focus-outline-offset: 2px;
+}

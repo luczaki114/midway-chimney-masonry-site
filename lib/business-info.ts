@@ -1,5 +1,5 @@
 export const business = {
-  name: "Midwest Chimney & Masonry",
+  name: "Your Business Name",
   phone: "YOUR_PHONE_NUMBER",
   phoneHref: "tel:+1YOURPHONENUMBER",
   email: "YOUR_EMAIL",
@@ -15,5 +15,5 @@ export const business = {
     saturday: "9am – 4pm",
     sunday: "Closed",
   },
-  serviceAreas: ["Chicago", "Naperville", "Aurora", "Joliet", "Elgin"],
+  serviceAreas: ["City One", "City Two", "City Three", "City Four", "City Five"],
 } as const;

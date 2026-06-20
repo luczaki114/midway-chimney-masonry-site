@@ -2,6 +2,15 @@
 
 # dependencies
 /node_modules
+
+# skills (installed via skills-lock.json, like node_modules)
+/.agents
+
+# local Claude Code settings (personal permission overrides)
+.claude/settings.local.json
+
+# Windows
+Thumbs.db
 /.pnp
 .pnp.*
 .yarn/*
@@ -19,6 +28,9 @@
 
 # production
 /build
+
+# playwright
+.playwright-mcp/
 
 # misc
 .DS_Store
