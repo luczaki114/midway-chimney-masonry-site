@@ -84,6 +84,9 @@ export default function Home() {
         <div className={SECTION}>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-3 max-w-[600px] mx-auto text-center">
+              <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
+                Chimney &amp; masonry
+              </span>
               <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black">
                 What we do
               </h2>

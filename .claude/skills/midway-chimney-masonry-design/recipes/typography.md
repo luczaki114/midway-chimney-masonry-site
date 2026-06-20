@@ -29,8 +29,20 @@ With the `tailwind.css` bridge loaded: `font-display` = Playfair, `font-sans` = 
 
 ## The signature section-opener stack
 
-Eyebrow → headline → **lead** → body. The lead is what makes a section feel composed rather than
-abrupt — don't skip it at the top of a section.
+Eyebrow → headline → **lead** → body. This is a **compositional tool, not a checklist.** Use
+the elements the copy needs — never all four by default.
+
+- **Eyebrow:** earns its place only when it adds context the headline can't carry alone — a
+  category label, a location, a scope qualifier. If it would just repeat the headline in smaller
+  text, omit it. Never drop an empty or redundant eyebrow span just for structure.
+- **Lead:** for sections where the H2 lands a statement and a sentence of setup is genuinely
+  needed before body copy. Skip it if the headline is self-sufficient.
+- **Body:** only when there's running copy below the lead. A section with just an H2 + grid
+  beneath it needs no lead or body prose above the grid.
+
+The lead is what makes a section feel composed rather than abrupt — but only when the section
+actually needs that breath. "Don't skip it" means don't skip it *when it's needed*, not that
+every section requires one.
 
 ```tsx
 <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">

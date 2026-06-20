@@ -51,7 +51,7 @@ const slides = [
     content: (
       <div className="max-w-[560px]">
         <h2 className="font-display font-bold text-[48px] md:text-[60px] leading-[1.04] text-off-white">
-          We Take Care of the People Who Took Care of Us.
+          We take care of the people who took care of us.
         </h2>
         <p className="font-sans text-xl leading-[1.5] text-off-white/80 mt-5">
           Midway Chimney &amp; Masonry is proud to offer special discounts for
@@ -72,7 +72,7 @@ const slides = [
     content: (
       <div className="max-w-[520px] ml-auto">
         <h2 className="font-display font-bold text-[48px] md:text-[60px] leading-[1.04] text-off-white">
-          South Side Chicago&rsquo;s Chimney &amp; Masonry Experts
+          South Side Chicago&rsquo;s chimney &amp; masonry experts
         </h2>
         <div className="mt-5">
           <StatBlock dark value="25+" caption="years of family service" />
