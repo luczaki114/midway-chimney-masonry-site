@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { HeroSlider } from "@/components/midway/hero-slider"
 import { PriceTag } from "@/components/midway/price-tag"
 import { ServiceCard } from "@/components/midway/service-card"
 import { PullQuote } from "@/components/midway/pull-quote"
@@ -12,44 +12,8 @@ export default function Home() {
   return (
     <main>
 
-      {/* ── Hero ── dark, full-bleed photo */}
-      <section
-        className="relative bg-cover bg-center min-h-[600px] flex items-center"
-        style={{ backgroundImage: "url('/chimney-rebuild-rooftop.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-near-black/50" />
-        <div className="relative z-10 max-w-[1280px] mx-auto px-6 py-28">
-          <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-off-white/85">
-            Cook · DuPage · Lake County
-          </span>
-          <h1 className="font-display font-bold text-[52px] md:text-[64px] leading-[1.04] text-off-white mt-4 max-w-[720px] text-balance">
-            Chimney Cleaning + 14-Point Inspection — $189
-          </h1>
-          <p className="font-sans text-xl leading-[1.5] text-off-white/80 mt-5 max-w-[560px]">
-            Two services. One honest price. Know exactly what you&rsquo;re paying before we show
-            up — no surprises, no add-ons you didn&rsquo;t ask for.
-          </p>
-          <div className="flex flex-wrap gap-4 mt-8">
-            <a
-              href={business.phoneHref}
-              className="inline-flex items-center font-sans font-semibold text-[18px] px-8 py-4
-                rounded-card bg-fire text-off-white hover:bg-fire-hover active:bg-fire-active
-                transition-colors duration-300 ease-in-out
-                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fire"
-            >
-              Call {business.phone}
-            </a>
-            <Button
-              variant="outline"
-              className="rounded-card font-semibold px-8 py-4 h-auto text-[18px] border-2
-                border-off-white/50 text-off-white bg-transparent hover:bg-off-white/10
-                transition-colors duration-300 ease-in-out"
-            >
-              Schedule Your Inspection
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* ── Hero Slider ── dark, full-bleed, 3 slides */}
+      <HeroSlider />
 
       {/* ── Trust Bar ── dark strip below hero */}
       <TrustBar />
