@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import "./globals.css"
 import { SiteFooter } from "@/components/midway/site-footer"
+import { SiteNav } from "@/components/midway/site-nav"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans antialiased">
+        <SiteNav />
         <div className="flex-1">{children}</div>
         <SiteFooter />
       </body>
