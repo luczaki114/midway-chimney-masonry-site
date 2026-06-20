@@ -18,6 +18,12 @@
       "sourceType": "github",
       "skillPath": "skills/shadcn/SKILL.md",
       "computedHash": "0dc0edeeaec2ae491ae506806517866a3f9bd48d04e0458feb37e0252862891f"
+    },
+    "karpathy-guidelines": {
+      "source": "andrej-karpathy-skills",
+      "sourceType": "plugin",
+      "skillPath": "skills/karpathy-guidelines/SKILL.md",
+      "sourceVersion": "1.0.0"
     }
   }
 }
