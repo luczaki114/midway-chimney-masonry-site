@@ -2,7 +2,7 @@
 
 ## Skills in this project
 
-Four skills are active. Invoke them by reading their SKILL.md before working in their domain.
+Five skills are active. Invoke them by reading their SKILL.md before working in their domain. Installed skills and versions are tracked in `skills-lock.json`.
 
 | Skill | Path | When to load |
 |---|---|---|
@@ -10,6 +10,7 @@ Four skills are active. Invoke them by reading their SKILL.md before working in 
 | **shadcn** | `.agents/skills/shadcn/SKILL.md` | Adding, debugging, or composing shadcn/base-ui primitives |
 | **frontend-design** | `.agents/skills/frontend-design/SKILL.md` | Inventing new UI shapes that have no existing Midway recipe |
 | **next-best-practices** | `.agents/skills/next-best-practices/SKILL.md` | Any Next.js work — RSC boundaries, data fetching, async APIs, routing, image/font, metadata, error handling |
+| **karpathy-guidelines** | `.agents/skills/karpathy-guidelines/SKILL.md` | Any code writing or editing — surgical changes, surface assumptions, no orthogonal edits |
 
 Read `brand-spec-sheet.pdf` (inside the midway-chimney-masonry-design skill folder) before writing any component — it is the canonical visual reference.
 
@@ -30,6 +31,9 @@ Three sources of UI guidance. They own different concerns — they don't compete
 
 **Build order:** shadcn primitive → skin with Midway tokens/recipes → if the shape is new, extend
 with the Frontend-Design skill, bounded by Midway. When in doubt on look, **Midway wins**.
+
+## Playwright artifacts
+Save all screenshots and snapshots to `.playwright-mcp/` by passing an explicit filename — e.g. `.playwright-mcp/hero-mobile.png`. Never save to the project root.
 
 ## Iteration loop
 1. Run `npm run dev`

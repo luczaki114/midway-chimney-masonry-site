@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Midway Chimney & Masonry — Site
 
-## Getting Started
+Next.js brochure site for Midway Chimney & Masonry, a family-owned chimney sweep and masonry contractor based near Midway Airport on Chicago's South Side. Built with Next.js App Router, Tailwind v4, and shadcn (base-ui flavor). Target deployment: Netlify.
 
-First, run the development server:
+---
+
+## Dev Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The page hot-reloads as you edit.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build   # production build
+npm run lint    # ESLint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Skills
 
-To learn more about Next.js, take a look at the following resources:
+Agent skills live in `.agents/skills/`. Installed skills and their sources are tracked in `skills-lock.json`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Install a skill from a plugin
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run skills:install
+```
 
-## Deploy on Vercel
+Claude Code will prompt for the plugin and skill name, copy the SKILL.md into `.agents/skills/<name>/`, and update `skills-lock.json`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Update an installed plugin skill to latest
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run skills:update
+```
+
+Re-pulls skill content from the source plugin and bumps the version in `skills-lock.json`. Local skills (source: `"local"`) are unaffected.
+
+### Check for outdated skills
+
+```bash
+npm run skills:check
+```
+
+Compares `skills-lock.json` against available plugin versions and reports what's stale.
+
+### Add a local skill manually
+
+1. Create `.agents/skills/<name>/SKILL.md` with a frontmatter block:
+   ```
+   ---
+   name: <name>
+   description: <one-line description>
+   source: local
+   sourceVersion: null
+   ---
+   ```
+2. Add an entry to `.agents/skills-lock.json` under `"skills"`.
+3. Add a row to the skills table in `AGENTS.md`.
+
+---
+
+## Business info
+
+Phone, email, address, hours, and service area live in `lib/business-info.ts`. All CTAs pull from there — never inline contact info in a component.
+
+---
+
+## Deployment
+
+Netlify config is in `netlify.toml`. Push to `master` to deploy.
