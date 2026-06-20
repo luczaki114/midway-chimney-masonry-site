@@ -59,7 +59,7 @@ Compares `skills-lock.json` against available plugin versions and reports what's
    sourceVersion: null
    ---
    ```
-2. Add an entry to `.agents/skills-lock.json` under `"skills"`.
+2. Add an entry to `skills-lock.json` under `"skills"`.
 3. Add a row to the skills table in `AGENTS.md`.
 
 ---
