@@ -59,11 +59,6 @@ as a large section background.** It should surprise, not saturate.
 
 (The bridge also ships a `.photo-frame` helper that injects the overlay for you — see `tailwind.css`.)
 
-**Fixed-height photo containers (carousels, sliders):** The section defines the height via
-`min-h-[*] flex items-center`. The inner content div handles only horizontal constraints —
-`max-w-[1280px] mx-auto px-6` — plus a small `py-10` buffer to keep content off the edge on
-short viewports. Vertical position is the section's job, not the content div's.
-
 **Imagery** in `assets/photos/` is real, warm, daylight job-site photography. Use it directly. **No
 stock photography** — it visually clashes with the authentic photos.
 

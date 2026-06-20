@@ -15,8 +15,8 @@ import { business } from "@/lib/business-info"
 const BTN =
   "inline-flex items-center font-sans font-semibold text-[18px] px-8 py-4 rounded-card bg-fire text-off-white hover:bg-fire-hover active:bg-fire-active transition-colors duration-300 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fire"
 
-const TEXT_LINK =
-  "group inline-flex items-center gap-1.5 font-sans font-semibold text-[17px] text-fire hover:text-fire-hover transition-colors duration-300 ease-in-out"
+const BTN_GHOST =
+  "inline-flex items-center font-sans font-semibold text-[18px] px-8 py-4 rounded-card border-2 border-off-white/50 text-off-white bg-transparent hover:bg-off-white/10 transition-colors duration-300 ease-in-out"
 
 const slides = [
   {
@@ -24,10 +24,10 @@ const slides = [
     align: "left" as const,
     content: (
       <div className="max-w-[540px]">
-        <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-off-white/85">
+        <h2 className="font-display font-bold text-[48px] md:text-[60px] leading-[1.04] text-off-white">
           Chimney Cleaning + 14-Point Inspection
-        </span>
-        <div className="mt-4">
+        </h2>
+        <div className="mt-5">
           <PriceTag amount={189} size="xl" dark />
         </div>
         <p className="font-sans text-xl leading-[1.5] text-off-white/80 mt-5">
@@ -38,9 +38,8 @@ const slides = [
           <a href={business.phoneHref} className={BTN}>
             Call {business.phone}
           </a>
-          <a href="#contact" className={TEXT_LINK}>
+          <a href="#contact" className={BTN_GHOST}>
             Schedule your inspection
-            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
         </div>
       </div>
@@ -59,13 +58,10 @@ const slides = [
           seniors and veterans. Because your service deserves more than a
           thank-you.
         </p>
-        <div className="mt-8 flex flex-col gap-2">
+        <div className="mt-8">
           <a href={business.phoneHref} className={BTN}>
             Call {business.phone}
           </a>
-          <span className="font-sans text-sm text-off-white/50">
-            Ask about senior &amp; veteran discounts
-          </span>
         </div>
       </div>
     ),
@@ -86,9 +82,8 @@ const slides = [
           one company, one call &mdash; serving Cook, DuPage, and Lake County.
         </p>
         <div className="mt-8">
-          <a href="#contact" className={TEXT_LINK}>
+          <a href="#contact" className={BTN}>
             Get a free estimate
-            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
         </div>
       </div>
@@ -134,9 +129,8 @@ export function HeroSlider() {
         </CarouselContent>
       </Carousel>
 
-      {/* Dots — left-aligned, flush with content column */}
-      <div className="absolute bottom-8 left-0 right-0 z-20">
-        <div className="max-w-[1280px] mx-auto px-6 flex gap-2">
+      {/* Dot indicators */}
+      <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center gap-2">
           {slides.map((_, i) => (
             <button
               key={i}
@@ -148,7 +142,6 @@ export function HeroSlider() {
               }`}
             />
           ))}
-        </div>
       </div>
     </div>
   )

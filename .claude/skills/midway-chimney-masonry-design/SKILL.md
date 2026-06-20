@@ -12,9 +12,12 @@ Read `README.md` first (the brand guide), then explore:
   after `@import "tailwindcss";` and shadcn's `:root` block). `tokens/midway-tokens.css` has the
   same values as framework-agnostic CSS variables.
 - `recipes/*.md` — self-contained specs (exact colors, sizes, states) for building branded
-  elements: `core.md` (Button, Badge, Eyebrow, Divider), `forms.md`, `content.md` (PriceTag,
+  elements: `typography.md` (full type scale + usage intent incl. the lead/standfirst),
+  `core.md` (Button, Badge, Eyebrow, Divider), `forms.md`, `content.md` (PriceTag,
   ServiceCard, PullQuote, StatBlock), `patterns.md` (section rhythm, photo treatment, layout).
 - `assets/photos/` — real, named job-site photographs to use directly (under a warm overlay).
+- `brand-spec-sheet.html` — a printable human reference (open in a browser → Save as PDF, Letter
+  portrait) covering color, type, spacing, components, photo treatment, and the hard rules.
 
 ## How to work
 

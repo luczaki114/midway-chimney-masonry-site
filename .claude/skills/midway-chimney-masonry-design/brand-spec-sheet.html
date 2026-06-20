@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Midway Chimney & Masonry — Brand Spec Sheet</title>
+<link rel="stylesheet" href="tokens/midway-tokens.css" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #6b6560; }
+  body { font-family: var(--font-body); color: var(--text-body); -webkit-font-smoothing: antialiased; }
+
+  /* Letter portrait pages */
+  .page {
+    width: 8.5in; min-height: 11in;
+    margin: 24px auto; background: var(--warm-off-white);
+    padding: 0.7in 0.75in; position: relative; overflow: hidden;
+  }
+  .page.dark { background: var(--warm-near-black); color: var(--text-on-dark); }
+
+  .eyebrow { font-weight: 300; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-secondary); }
+  .dark .eyebrow { color: var(--text-on-dark-muted); }
+  h1,h2,h3 { font-family: var(--font-serif-display); margin: 0; color: var(--text-heading); }
+  .dark h1, .dark h2, .dark h3 { color: var(--text-on-dark); }
+
+  .sec-title { font-weight: 700; font-size: 30px; line-height: 1.1; margin: 6px 0 0; }
+  .rule { border: 0; border-top: 2px solid var(--fire-red); width: 56px; margin: 14px 0 26px; }
+  .hairline { border: 0; border-top: 1px solid var(--border-hairline); margin: 22px 0; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
+  .grid5 { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; }
+
+  .label { font-size: 12px; font-weight: 600; color: var(--text-body); }
+  .meta { font-size: 11px; color: var(--text-secondary); }
+  .mono { font-variant-numeric: tabular-nums; }
+
+  /* page footer */
+  .foot { position: absolute; left: 0.75in; right: 0.75in; bottom: 0.5in; display: flex; justify-content: space-between; font-size: 10px; color: var(--text-secondary); letter-spacing: 0.04em; }
+  .dark .foot { color: var(--text-on-dark-muted); }
+
+  @page { size: letter portrait; margin: 0; }
+  @media print {
+    html, body { background: #fff; }
+    .page { margin: 0; box-shadow: none; page-break-after: always; }
+    .page:last-child { page-break-after: auto; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .screen-only { display: none; }
+  }
+  .screen-only { text-align: center; color: #efeae3; font-size: 13px; padding: 18px 0 0; font-family: var(--font-body); }
+</style>
+</head>
+<body>
+
+<div class="screen-only">Brand Spec Sheet · print or “Save as PDF” (Letter portrait) — backgrounds &amp; photos print exactly</div>
+
+<!-- ============ COVER ============ -->
+<section class="page dark" style="display:flex; flex-direction:column; justify-content:space-between;">
+  <div>
+    <span class="eyebrow">Brand Spec Sheet · 2026</span>
+  </div>
+  <div>
+    <h1 style="font-weight:800; font-size:64px; line-height:1.02;">Midway<br/>Chimney &amp; Masonry</h1>
+    <hr class="rule" style="margin:24px 0;" />
+    <p style="font-size:18px; line-height:1.55; color:var(--text-on-dark-muted); max-width:5in; margin:0;">
+      A warm, grounded, South Side Chicago brand. Honest pricing in a serif, real job-site
+      photography under a warm overlay, fire red only where it counts — and no navy blue, anywhere.
+    </p>
+  </div>
+  <div style="display:flex; gap:44px; align-items:flex-end;">
+    <div><div style="font-family:var(--font-serif-display); font-weight:700; font-size:52px; line-height:0.95; margin-bottom:6px;">25<span style="font-size:26px;">+</span></div><div class="meta" style="color:var(--text-on-dark-muted);">Years on the South Side</div></div>
+    <div><div style="font-family:var(--font-serif-display); font-weight:700; font-size:52px; line-height:0.95; margin-bottom:6px;"><span style="color:var(--fire-red);">$</span>189</div><div class="meta" style="color:var(--text-on-dark-muted);">Cleaning + 14-pt inspection</div></div>
+    <div><div style="font-family:var(--font-serif-display); font-weight:700; font-size:52px; line-height:0.95; margin-bottom:6px;">3</div><div class="meta" style="color:var(--text-on-dark-muted);">Counties served</div></div>
+  </div>
+  <div class="foot"><span>MIDWAY CHIMNEY &amp; MASONRY</span><span>01 · COVER</span></div>
+</section>
+
+<!-- ============ COLOR ============ -->
+<section class="page">
+  <span class="eyebrow">Foundations</span>
+  <h2 class="sec-title">Color</h2>
+  <hr class="rule" />
+  <p style="font-size:15px; line-height:1.6; max-width:6in; margin:0 0 22px;">Warm temperatures throughout. <strong>No navy blue, anywhere</strong> — every competitor uses it. Red appears only on interactive elements and the price callout; it should surprise, never saturate.</p>
+
+  <div class="grid5">
+    <div><div style="height:78px; border-radius:6px; background:var(--warm-near-black); border:1px solid rgba(28,23,20,.08);"></div><div class="label" style="margin-top:8px;">Near-Black</div><div class="meta mono">#1C1714</div></div>
+    <div><div style="height:78px; border-radius:6px; background:var(--warm-off-white); border:1px solid rgba(28,23,20,.12);"></div><div class="label" style="margin-top:8px;">Off-White</div><div class="meta mono">#F7F5F1</div></div>
+    <div><div style="height:78px; border-radius:6px; background:var(--fire-red);"></div><div class="label" style="margin-top:8px;">Fire Red</div><div class="meta mono">#C41E2E</div></div>
+    <div><div style="height:78px; border-radius:6px; background:var(--warm-body);"></div><div class="label" style="margin-top:8px;">Body</div><div class="meta mono">#2E2926</div></div>
+    <div><div style="height:78px; border-radius:6px; background:var(--warm-mid-gray);"></div><div class="label" style="margin-top:8px;">Mid-Gray</div><div class="meta mono">#8A8380</div></div>
+  </div>
+
+  <hr class="hairline" />
+  <div class="grid2">
+    <div>
+      <div class="label" style="margin-bottom:10px;">Fire red — interactive states (deepens, never lightens)</div>
+      <div class="grid4">
+        <div><div style="height:48px; border-radius:6px; background:var(--fire-red);"></div><div class="meta" style="margin-top:6px;">Default</div><div class="meta mono">C41E2E</div></div>
+        <div><div style="height:48px; border-radius:6px; background:var(--fire-red-hover);"></div><div class="meta" style="margin-top:6px;">Hover</div><div class="meta mono">A01824</div></div>
+        <div><div style="height:48px; border-radius:6px; background:var(--fire-red-active);"></div><div class="meta" style="margin-top:6px;">Press</div><div class="meta mono">8A1420</div></div>
+        <div><div style="height:48px; border-radius:6px; background:var(--warm-mid-gray);"></div><div class="meta" style="margin-top:6px;">Disabled</div><div class="meta mono">8A8380</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="label" style="margin-bottom:10px;">Primary vs Destructive (distinct hues)</div>
+      <div class="grid2">
+        <div><div style="height:48px; border-radius:6px; background:var(--fire-red); display:flex; align-items:center; justify-content:center; color:#fff; font-size:12px; font-weight:600;">Submit</div><div class="meta" style="margin-top:6px;">Primary · crimson</div><div class="meta mono">C41E2E</div></div>
+        <div><div style="height:48px; border-radius:6px; background:var(--destructive); display:flex; align-items:center; justify-content:center; color:#fff; font-size:12px; font-weight:600;">Delete</div><div class="meta" style="margin-top:6px;">Destructive · oxblood</div><div class="meta mono">8C2A1C</div></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hairline" />
+  <div class="label" style="margin-bottom:10px;">Section rhythm — alternate dark and light down the page</div>
+  <div style="border-radius:6px; overflow:hidden; border:1px solid rgba(28,23,20,.08);">
+    <div style="background:var(--warm-near-black); color:var(--text-on-dark); padding:10px 14px; font-size:12px;">● &nbsp;Dark — photo or solid #1C1714</div>
+    <div style="background:var(--warm-off-white); color:var(--text-body); padding:10px 14px; font-size:12px;"><span style="color:var(--fire-red);">●</span> &nbsp;Light — solid #F7F5F1 · red on the CTA only</div>
+    <div style="background:var(--warm-near-black); color:var(--text-on-dark); padding:10px 14px; font-size:12px;">● &nbsp;Dark</div>
+    <div style="background:var(--warm-off-white); color:var(--text-body); padding:10px 14px; font-size:12px;">● &nbsp;Light</div>
+  </div>
+  <div class="foot"><span>COLOR</span><span>02</span></div>
+</section>
+
+<!-- ============ TYPOGRAPHY ============ -->
+<section class="page">
+  <span class="eyebrow">Foundations</span>
+  <h2 class="sec-title">Typography</h2>
+  <hr class="rule" />
+
+  <div style="margin-bottom:6px;"><span class="meta">H1 · Playfair Display Bold · 52px</span></div>
+  <div style="font-family:var(--font-serif-display); font-weight:700; font-size:50px; line-height:1.04; color:var(--text-heading);">Chimneys done right, the first time.</div>
+
+  <div style="margin:20px 0 6px;"><span class="meta">H2 · Playfair Display Regular · 36px — softer secondary headline</span></div>
+  <div style="font-family:var(--font-serif-display); font-weight:400; font-size:34px; line-height:1.1; color:var(--text-heading);">Family masonry on the South Side</div>
+
+  <hr class="hairline" />
+
+  <div class="meta" style="margin-bottom:12px;">The section-opener stack — eyebrow → headline → lead → body</div>
+  <span class="eyebrow">Chimney Cleaning · Cook County</span>
+  <div style="font-family:var(--font-serif-display); font-weight:700; font-size:28px; line-height:1.1; margin:6px 0 12px;">Two trades, one family</div>
+  <p style="font-size:20px; line-height:1.5; margin:0 0 12px; max-width:6in;">When you call, you talk to the family that does the work — no call center, no franchise markup. <span class="meta">&nbsp;← Lead · Inter 20px / 1.5</span></p>
+  <p style="font-size:16px; line-height:1.6; margin:0; max-width:6in;">We publish our prices up front and stand behind every repair. Over 25 years cleaning chimneys and rebuilding brickwork across Chicago's South Side and the suburbs. <span class="meta">← Body · Inter 16px / 1.6</span></p>
+
+  <hr class="hairline" />
+  <div class="meta" style="margin-bottom:12px;">Display numbers — Playfair Bold, fire-red currency, suffix at ~50% size, 13px caption</div>
+  <div style="display:flex; gap:48px; align-items:flex-end;">
+    <div><div style="font-family:var(--font-serif-display); font-weight:700; font-size:72px; line-height:0.95; margin-bottom:8px;"><span style="color:var(--fire-red);">$</span>189</div><div class="meta">Cleaning + 14-pt inspection</div></div>
+    <div><div style="font-family:var(--font-serif-display); font-weight:700; font-size:72px; line-height:0.95; margin-bottom:8px;">25<span style="font-size:36px;">+</span></div><div class="meta">Years on the South Side</div></div>
+    <div><div style="font-family:var(--font-serif-display); font-weight:700; font-size:72px; line-height:0.95; margin-bottom:8px;">3</div><div class="meta">Counties served</div></div>
+  </div>
+  <div class="foot"><span>TYPOGRAPHY</span><span>03</span></div>
+</section>
+
+<!-- ============ SPACING / RADIUS / MOTION ============ -->
+<section class="page">
+  <span class="eyebrow">Foundations</span>
+  <h2 class="sec-title">Spacing, radius &amp; surface</h2>
+  <hr class="rule" />
+
+  <div class="label" style="margin-bottom:12px;">Spacing scale — 8px base · gutter 24 · section padding 96 / 56</div>
+  <div style="display:flex; align-items:flex-end; gap:16px;">
+    <div style="text-align:center;"><div style="width:26px; height:8px; background:var(--fire-red); border-radius:3px;"></div><div class="meta">8</div></div>
+    <div style="text-align:center;"><div style="width:26px; height:16px; background:var(--fire-red); border-radius:3px;"></div><div class="meta">16</div></div>
+    <div style="text-align:center;"><div style="width:26px; height:24px; background:var(--fire-red); border-radius:3px;"></div><div class="meta">24</div></div>
+    <div style="text-align:center;"><div style="width:26px; height:32px; background:var(--fire-red); border-radius:3px;"></div><div class="meta">32</div></div>
+    <div style="text-align:center;"><div style="width:26px; height:48px; background:var(--fire-red); border-radius:3px;"></div><div class="meta">48</div></div>
+    <div style="text-align:center;"><div style="width:26px; height:56px; background:var(--fire-red); border-radius:3px;"></div><div class="meta">56</div></div>
+    <div style="text-align:center;"><div style="width:26px; height:64px; background:var(--fire-red); border-radius:3px;"></div><div class="meta">64</div></div>
+    <div style="text-align:center;"><div style="width:26px; height:96px; background:var(--fire-red); border-radius:3px;"></div><div class="meta">96</div></div>
+  </div>
+
+  <hr class="hairline" />
+  <div class="label" style="margin-bottom:12px;">Radius, rules &amp; the one shadow (flat by principle)</div>
+  <div style="display:flex; gap:30px; align-items:center; flex-wrap:wrap;">
+    <div><div style="width:88px; height:56px; background:var(--warm-off-white); border:1px solid var(--border-hairline); border-radius:6px;"></div><div class="label" style="margin-top:8px;">6px</div><div class="meta">cards &amp; buttons</div></div>
+    <div><div style="width:88px; height:56px; background:var(--warm-off-white); border:1px solid var(--border-hairline); border-radius:0;"></div><div class="label" style="margin-top:8px;">0px</div><div class="meta">full-bleed photo</div></div>
+    <div><hr style="border:0; border-top:1px solid var(--border-hairline); width:88px; margin:22px 0;" /><div class="label">Hairline</div><div class="meta">warm mid-gray</div></div>
+    <div><hr style="border:0; border-top:2px solid var(--fire-red); width:56px; margin:22px 0;" /><div class="label">2px fire rule</div><div class="meta">1–2 per page</div></div>
+    <div><div style="width:120px; height:42px; background:var(--warm-off-white); border-radius:6px; box-shadow:var(--shadow-nav);"></div><div class="label" style="margin-top:8px;">Nav shadow</div><div class="meta">only shadow in system</div></div>
+  </div>
+
+  <hr class="hairline" />
+  <div class="label" style="margin-bottom:10px;">Motion</div>
+  <p style="font-size:15px; line-height:1.6; max-width:6in; margin:0;">250–300ms, <strong>ease-in-out</strong> only — no linear, no bounce. Animate color, background, border, box-shadow, opacity, transform; never width/height. Buttons <strong>deepen</strong> on hover &amp; press. Focus is always a 2px fire-red outline at 2px offset.</p>
+  <div class="foot"><span>SPACING &amp; SURFACE</span><span>04</span></div>
+</section>
+
+<!-- ============ COMPONENTS ============ -->
+<section class="page">
+  <span class="eyebrow">Applied</span>
+  <h2 class="sec-title">Components</h2>
+  <hr class="rule" />
+
+  <div class="label" style="margin-bottom:10px;">Buttons &amp; badges</div>
+  <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-bottom:14px;">
+    <span style="background:var(--fire-red); color:var(--warm-off-white); font-weight:600; font-size:15px; padding:11px 22px; border-radius:6px;">Call (773) 555-0199</span>
+    <span style="background:transparent; color:var(--warm-near-black); border:2px solid var(--warm-near-black); font-weight:600; font-size:15px; padding:9px 20px; border-radius:6px;">See our services</span>
+    <span style="background:var(--destructive); color:#fff; font-weight:600; font-size:15px; padding:11px 22px; border-radius:6px;">Delete job</span>
+    <span style="background:var(--warm-mid-gray); color:var(--warm-off-white); font-weight:600; font-size:15px; padding:11px 22px; border-radius:6px;">Unavailable</span>
+  </div>
+  <div style="display:flex; gap:10px; flex-wrap:wrap;">
+    <span style="background:var(--fire-red); color:#fff; font-weight:600; font-size:12px; padding:5px 10px; border-radius:6px;">Senior discount</span>
+    <span style="background:var(--warm-near-black); color:#fff; font-weight:600; font-size:12px; padding:5px 10px; border-radius:6px;">Licensed &amp; insured</span>
+    <span style="border:1px solid var(--warm-mid-gray); color:var(--text-body); font-weight:600; font-size:12px; padding:5px 10px; border-radius:6px;">Cook County</span>
+  </div>
+
+  <hr class="hairline" />
+  <div class="grid2">
+    <div>
+      <div class="label" style="margin-bottom:10px;">Form field (label above, 16px text, fire focus)</div>
+      <div style="font-size:15px; font-weight:600; margin-bottom:8px;">Phone</div>
+      <div style="border:1px solid var(--fire-red); box-shadow:0 0 0 2px var(--warm-off-white),0 0 0 4px var(--fire-red); border-radius:6px; padding:10px 13px; font-size:16px; color:var(--text-body); background:var(--warm-off-white);">(773) 555-0123</div>
+      <div class="meta" style="margin-top:8px;">Focus state · border + 2px fire ring</div>
+    </div>
+    <div>
+      <div class="label" style="margin-bottom:10px;">Service card (flat, hairline border, no shadow)</div>
+      <div style="border:1px solid var(--border-hairline); border-radius:6px; padding:18px; background:var(--warm-off-white);">
+        <div style="font-family:var(--font-serif-display); font-weight:700; font-size:20px;">Chimney Cleaning</div>
+        <p style="font-size:14px; line-height:1.55; margin:8px 0 12px; color:var(--text-body);">Full sweep plus our 14-point safety inspection.</p>
+        <div style="font-family:var(--font-serif-display); font-weight:700; font-size:26px;"><span style="color:var(--fire-red);">$</span>189 <span style="font-family:var(--font-body); font-size:12px; font-weight:500; color:var(--text-secondary);">flat</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hairline" />
+  <div class="label" style="margin-bottom:14px;">Pull quote — Playfair italic, fire-red mark (warmer than a review widget)</div>
+  <div style="position:relative; padding-left:48px; max-width:6.2in;">
+    <span style="position:absolute; left:0; top:-14px; font-family:var(--font-serif-display); font-weight:700; font-size:76px; line-height:1; color:var(--fire-red);">&ldquo;</span>
+    <div style="font-family:var(--font-serif-display); font-style:italic; font-weight:500; font-size:22px; line-height:1.35; color:var(--text-heading);">They told me the price over the phone, showed up when they said, and the chimney's never drawn better.</div>
+    <div class="meta" style="margin-top:12px;"><strong style="color:var(--text-body);">Maria T.</strong> · Garfield Ridge, Chicago</div>
+  </div>
+  <div class="foot"><span>COMPONENTS</span><span>05</span></div>
+</section>
+
+<!-- ============ PHOTO TREATMENT ============ -->
+<section class="page dark" style="padding:0;">
+  <div style="position:relative; height:100%; min-height:11in;">
+    <div style="position:absolute; inset:0; background-image:url('assets/photos/chimney-rebuild-rooftop.jpg'); background-size:cover; background-position:center;"></div>
+    <div style="position:absolute; inset:0; background:var(--photo-overlay);"></div>
+    <div style="position:relative; padding:0.7in 0.75in; height:100%; display:flex; flex-direction:column; justify-content:space-between;">
+      <div>
+        <span class="eyebrow" style="color:#E6E1DB;">Applied · Photo treatment</span>
+        <h2 style="color:var(--text-on-dark); font-weight:800; font-size:46px; line-height:1.05; margin:8px 0 0; max-width:6in;">Real job sites, one warm overlay.</h2>
+        <hr style="border:0; border-top:2px solid var(--fire-red); width:56px; margin:18px 0 0;" />
+      </div>
+      <div style="background:rgba(28,23,20,0.55); border-radius:6px; padding:20px 22px; max-width:5.2in;">
+        <ol style="margin:0; padding-left:18px; color:#EDE9E3; font-size:14px; line-height:1.7;">
+          <li>Warm near-black overlay at <strong>40–55%</strong> on every photo background.</li>
+          <li>Photos only on dark sections — <strong>never</strong> on a light background.</li>
+          <li>Bleed to the edge: no rounded corners, no border. Constrain the text, not the image.</li>
+        </ol>
+        <p style="margin:14px 0 0; color:#C9C3BD; font-size:12px;">Authentic, warm, daylight photography only. No stock — it clashes with the real work.</p>
+      </div>
+    </div>
+    <div class="foot" style="left:0.75in; right:0.75in;"><span style="color:#C9C3BD;">PHOTO TREATMENT</span><span style="color:#C9C3BD;">06</span></div>
+  </div>
+</section>
+
+<!-- ============ RULES ============ -->
+<section class="page">
+  <span class="eyebrow">Reference</span>
+  <h2 class="sec-title">Hard rules</h2>
+  <hr class="rule" />
+  <div class="grid2" style="gap:30px;">
+    <div>
+      <div class="label" style="color:var(--fire-red); margin-bottom:10px;">Always</div>
+      <ul style="margin:0; padding-left:18px; font-size:14px; line-height:1.8;">
+        <li>Warm palette only — serif headlines, Inter body (16px+).</li>
+        <li>Alternate dark / light sections down the page.</li>
+        <li>Photos on dark sections, under a 40–55% warm overlay, edge-to-edge.</li>
+        <li>Fire red on CTAs &amp; prices; oxblood for destructive.</li>
+        <li>Flat surfaces, 6px radius; one shadow (sticky nav).</li>
+        <li>Deliberate 250–300ms ease-in-out; buttons deepen on hover.</li>
+        <li>Transparent pricing in the serif, at menu-price scale.</li>
+      </ul>
+    </div>
+    <div>
+      <div class="label" style="color:var(--warm-mid-gray); margin-bottom:10px;">Never</div>
+      <ul style="margin:0; padding-left:18px; font-size:14px; line-height:1.8;">
+        <li><strong>Navy blue</strong> — anywhere.</li>
+        <li>Badge / certification logo grids.</li>
+        <li>Pill-shaped buttons.</li>
+        <li>Thin-weight Playfair.</li>
+        <li>Stock photography.</li>
+        <li>"Family Owned" as a badge or stamp.</li>
+        <li>Gradients, patterns, textures, glassmorphism.</li>
+        <li>Emoji · icon grids · auto-playing video.</li>
+      </ul>
+    </div>
+  </div>
+  <hr class="hairline" />
+  <p style="font-size:13px; line-height:1.6; color:var(--text-secondary); margin:0;">Voice: neighborly, honest, plain-spoken South Side Chicago. "We" for the business, "you" for the reader. Sentence case; UPPERCASE only for the tracked eyebrow. Specificity over claims — name the neighborhood and the trade detail. No hype, no corporate filler.</p>
+  <div class="foot"><span>HARD RULES</span><span>07</span></div>
+</section>
+
+</body>
+</html>

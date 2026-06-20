@@ -73,5 +73,6 @@ On dark sections: quote `text-off-white`, attribution `text-on-dark-muted`.
 ## StatBlock — serif numbers carry authority
 
 `flex flex-col gap-1.5`. Value `font-display font-bold text-6xl leading-[0.95] text-near-black`
-(64px); caption `font-sans text-[15px] text-mid-gray max-w-[200px]`. Use for "25+ years",
-"3 counties", "$189 flat". On dark: value `text-off-white`, caption `text-on-dark-muted`.
+(64px); caption `font-sans text-[13px] text-mid-gray max-w-[200px]` (13–14px — tighter than the
+15px body floor; these are labels). A trailing `+`/`%` suffix is set at ~50% of the figure size
+(see Typography → Display numbers). On dark: value `text-off-white`, caption `text-on-dark-muted`.

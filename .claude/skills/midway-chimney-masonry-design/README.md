@@ -18,10 +18,12 @@ neighborhood institution, never a home-services franchise.
 midway-chimney-masonry-design/
   SKILL.md              — entry point / invocation
   README.md             — this file (the brand guide)
+  brand-spec-sheet.html — printable one-page brand reference (Save as PDF, Letter portrait)
   tokens/
     midway-tokens.css   — all brand values as CSS custom properties (framework-agnostic)
     tailwind.css        — Tailwind v4 @theme + shadcn variable bridge (the integration point)
   recipes/
+    typography.md       — full type scale + usage intent (incl. the lead/standfirst)
     core.md             — Button, Badge, Eyebrow, Divider
     forms.md            — Input, Textarea, Select, FormField
     content.md          — PriceTag, ServiceCard, PullQuote, StatBlock

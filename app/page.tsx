@@ -21,7 +21,7 @@ export default function Home() {
       {/* ── Brief Intro ── light */}
       <section className="bg-off-white">
         <div className={SECTION}>
-          <p className="font-sans text-lg leading-[1.6] text-body max-w-[720px]">
+          <p className="font-sans text-lg leading-[1.6] text-body max-w-[680px] mx-auto text-center">
             Midway Chimney &amp; Masonry is a family-owned business based near Midway Airport on
             Chicago&rsquo;s South Side. For over 25 years, we&rsquo;ve been cleaning chimneys,
             repointing brickwork, and handling everything in between for homeowners across Cook,
@@ -83,13 +83,13 @@ export default function Home() {
       <section className="bg-off-white">
         <div className={SECTION}>
           <div className="flex flex-col gap-10">
-            <div className="flex flex-col gap-3">
-              <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
+            <div className="flex flex-col gap-3 max-w-[600px] mx-auto text-center">
+              <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black">
                 What we do
-              </span>
-              <h2 className="font-display font-bold text-4xl leading-[1.1] text-near-black">
-                One call covers it all
               </h2>
+              <p className="font-sans text-xl leading-[1.5] text-body">
+                One call covers it all
+              </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               <ServiceCard
@@ -114,12 +114,12 @@ export default function Home() {
         <div className={SECTION}>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-3">
-              <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-off-white/60">
+              <h2 className="font-display font-bold text-[36px] leading-[1.1] text-off-white">
                 Why Midway
-              </span>
-              <h2 className="font-display font-bold text-4xl leading-[1.1] text-off-white max-w-[600px]">
-                Why homeowners across Cook County call Midway
               </h2>
+              <p className="font-sans text-xl leading-[1.5] text-[#E6E1DB] max-w-[560px]">
+                We post our prices. We do both. We show up.
+              </p>
             </div>
             <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
               {[
@@ -156,13 +156,13 @@ export default function Home() {
       {/* ── Testimonials ── light (placeholder) */}
       <section className="bg-off-white">
         <div className={SECTION}>
-          <div className="flex flex-col gap-3 mb-14">
-            <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
-              What customers say
-            </span>
-            <h2 className="font-display font-bold text-4xl leading-[1.1] text-near-black">
-              Straight from the South Side
+          <div className="flex flex-col gap-3 mb-14 max-w-[600px] mx-auto text-center">
+            <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black">
+              In their words
             </h2>
+            <p className="font-sans text-xl leading-[1.5] text-body">
+              Straight from the South Side
+            </p>
           </div>
           {/* Testimonials placeholder — to be supplied by client */}
           <div className="grid md:grid-cols-2 gap-14">
@@ -185,12 +185,12 @@ export default function Home() {
         <div className={SECTION}>
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-3">
-              <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-off-white/60">
-                Where we work
-              </span>
-              <h2 className="font-display font-bold text-4xl leading-[1.1] text-off-white">
-                Serving the South Side and beyond
+              <h2 className="font-display font-bold text-[36px] leading-[1.1] text-off-white">
+                Service area
               </h2>
+              <p className="font-sans text-xl leading-[1.5] text-[#E6E1DB] max-w-[560px]">
+                Serving the South Side and beyond
+              </p>
             </div>
             <div className="flex flex-wrap gap-12">
               {[
@@ -224,12 +224,12 @@ export default function Home() {
         <div className={SECTION}>
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="flex flex-col gap-4">
-              <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
+              <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black">
                 Get in touch
-              </span>
-              <h2 className="font-display font-bold text-4xl leading-[1.1] text-near-black">
-                Ready to book or just have a question?
               </h2>
+              <p className="font-sans text-xl leading-[1.5] text-body">
+                Ready to book or just have a question?
+              </p>
               <p className="font-sans text-base leading-[1.6] text-body">
                 We&rsquo;re open 7 days a week. Call us or fill out the form and we&rsquo;ll get
                 back to you within 24 hours.
