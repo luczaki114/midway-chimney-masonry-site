@@ -12,13 +12,17 @@ neighborhood institution, never a home-services franchise.
 
 ---
 
+> **Read the brand spec sheet PDF first.** `brand-spec-sheet.pdf`
+> is the canonical one-page visual reference — color swatches, type scale, component examples,
+> photo treatment, and every hard rule in one place. Read it before writing any component.
+
 ## What's in here
 
 ```
 midway-chimney-masonry-design/
-  SKILL.md              — entry point / invocation
-  README.md             — this file (the brand guide)
-  brand-spec-sheet.html — printable one-page brand reference (Save as PDF, Letter portrait)
+  SKILL.md                                       — entry point / invocation
+  README.md                                      — this file (the brand guide)
+  brand-spec-sheet.pdf                           — canonical brand reference (read first)
   tokens/
     midway-tokens.css   — all brand values as CSS custom properties (framework-agnostic)
     tailwind.css        — Tailwind v4 @theme + shadcn variable bridge (the integration point)

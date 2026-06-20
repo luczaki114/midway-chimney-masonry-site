@@ -16,8 +16,8 @@ Read `README.md` first (the brand guide), then explore:
   `core.md` (Button, Badge, Eyebrow, Divider), `forms.md`, `content.md` (PriceTag,
   ServiceCard, PullQuote, StatBlock), `patterns.md` (section rhythm, photo treatment, layout).
 - `assets/photos/` — real, named job-site photographs to use directly (under a warm overlay).
-- `brand-spec-sheet.html` — a printable human reference (open in a browser → Save as PDF, Letter
-  portrait) covering color, type, spacing, components, photo treatment, and the hard rules.
+- `brand-spec-sheet.pdf` — canonical brand reference covering color, type, spacing,
+  components, photo treatment, and the hard rules.
 
 ## How to work
 
