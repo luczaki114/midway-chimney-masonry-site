@@ -4,7 +4,11 @@
 /node_modules
 
 # skills (installed via skills-lock.json, like node_modules)
-/.agents
+# drill down through each level so git sees the proprietary skill exception
+/.agents/*
+!/.agents/skills/
+/.agents/skills/*
+!/.agents/skills/midway-chimney-masonry-design/
 
 # local Claude Code settings (personal permission overrides)
 .claude/settings.local.json

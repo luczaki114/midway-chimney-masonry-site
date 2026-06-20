@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "skills:install": "npx skills install",
+    "skills:update": "npx skills update",
+    "skills:check": "npx skills check"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

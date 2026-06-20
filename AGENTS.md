@@ -2,13 +2,14 @@
 
 ## Skills in this project
 
-Three skills are active. Invoke them by reading their SKILL.md before working in their domain.
+Four skills are active. Invoke them by reading their SKILL.md before working in their domain.
 
 | Skill | Path | When to load |
 |---|---|---|
-| **midway-chimney-masonry-design** | `.claude/skills/midway-chimney-masonry-design/SKILL.md` | Any visual or brand work — color, type, layout, photography, component recipes |
+| **midway-chimney-masonry-design** | `.agents/skills/midway-chimney-masonry-design/SKILL.md` | Any visual or brand work — color, type, layout, photography, component recipes |
 | **shadcn** | `.agents/skills/shadcn/SKILL.md` | Adding, debugging, or composing shadcn/base-ui primitives |
 | **frontend-design** | `.agents/skills/frontend-design/SKILL.md` | Inventing new UI shapes that have no existing Midway recipe |
+| **next-best-practices** | `.agents/skills/next-best-practices/SKILL.md` | Any Next.js work — RSC boundaries, data fetching, async APIs, routing, image/font, metadata, error handling |
 
 Read `brand-spec-sheet.pdf` (inside the midway-chimney-masonry-design skill folder) before writing any component — it is the canonical visual reference.
 
