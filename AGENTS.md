@@ -33,6 +33,10 @@ with the Frontend-Design skill, bounded by Midway. When in doubt on look, **Midw
 ## Iteration loop
 1. Run `npm run dev`
 2. Make the change
-3. Use Playwright MCP to navigate to localhost:3000 and screenshot
-4. Compare against design system and spec sheet.
-5. Iterate until it matches, then commit
+3. Use Playwright MCP to navigate to localhost:3000 and screenshot at all three breakpoints:
+   - **Mobile** — 390px wide (`browser_resize` to 390×844)
+   - **Tablet** — 768px wide (`browser_resize` to 768×1024)
+   - **Desktop** — 1280px wide (`browser_resize` to 1280×900)
+4. Critically evaluate each screenshot: spacing, alignment, wrapping, type scale, color. Do not accept "close enough" — fix issues before moving on.
+5. Compare against design system and spec sheet.
+6. Iterate until all three breakpoints match, then commit

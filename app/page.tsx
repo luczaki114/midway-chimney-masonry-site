@@ -3,7 +3,7 @@ import { PriceTag } from "@/components/midway/price-tag"
 import { ServiceCard } from "@/components/midway/service-card"
 import { PullQuote } from "@/components/midway/pull-quote"
 import { StatBlock } from "@/components/midway/stat-block"
-import { TrustBar } from "@/components/midway/trust-bar"
+import { PriceStrip } from "@/components/midway/price-strip"
 import { business } from "@/lib/business-info"
 
 const SECTION = "max-w-[1280px] mx-auto px-6 py-14 md:py-24"
@@ -15,8 +15,8 @@ export default function Home() {
       {/* ── Hero Slider ── dark, full-bleed, 3 slides */}
       <HeroSlider />
 
-      {/* ── Trust Bar ── dark strip below hero */}
-      <TrustBar />
+      {/* ── Price Strip ── light bar below hero */}
+      <PriceStrip />
 
       {/* ── Brief Intro ── light */}
       <section className="bg-off-white">
