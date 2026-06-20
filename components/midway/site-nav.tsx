@@ -53,7 +53,7 @@ export function SiteNav() {
       <div className="max-w-[1280px] mx-auto px-6 h-[72px] flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex items-baseline gap-2.5 shrink-0">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <span className="font-display font-bold text-[22px] tracking-[-0.01em] text-near-black">
             Midway
           </span>
@@ -97,7 +97,7 @@ export function SiteNav() {
           <SheetContent side="right" className="bg-off-white w-[280px] p-0">
             <SheetTitle className="sr-only">Navigation</SheetTitle>
             <SheetHeader className="px-6 pt-6 pb-4 border-b border-near-black/[0.08]">
-              <Link href="/" className="flex items-baseline gap-2">
+              <Link href="/" className="flex items-center gap-2">
                 <span className="font-display font-bold text-[20px] tracking-[-0.01em] text-near-black">
                   Midway
                 </span>
