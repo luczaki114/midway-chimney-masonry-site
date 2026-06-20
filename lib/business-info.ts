@@ -1,19 +1,26 @@
 export const business = {
-  name: "Your Business Name",
-  phone: "YOUR_PHONE_NUMBER",
-  phoneHref: "tel:+1YOURPHONENUMBER",
+  name: "Midway Chimney & Masonry",
+  phone: "(312) 241-5115",
+  phoneHref: "tel:+13122415115",
   email: "YOUR_EMAIL",
   emailHref: "mailto:YOUR_EMAIL",
   address: {
     street: "YOUR_STREET",
-    city: "YOUR_CITY",
+    city: "Chicago",
     state: "IL",
     zip: "YOUR_ZIP",
+    neighborhood: "Near Midway Airport, South Side",
   },
   hours: {
-    weekdays: "8am – 6pm",
-    saturday: "9am – 4pm",
-    sunday: "Closed",
+    weekdays: "YOUR_WEEKDAY_HOURS",
+    saturday: "YOUR_SATURDAY_HOURS",
+    sunday: "YOUR_SUNDAY_HOURS",
   },
-  serviceAreas: ["City One", "City Two", "City Three", "City Four", "City Five"],
+  serviceAreas: ["Cook County", "DuPage County", "Lake County"],
+  offer: {
+    label: "Chimney Cleaning + 14-Point Inspection",
+    price: "$189",
+    description:
+      "Two services. One honest price. Know exactly what you're paying before we show up — no surprises, no add-ons you didn't ask for.",
+  },
 } as const;
