@@ -17,7 +17,10 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Midway Chimney & Masonry",
+  title: {
+    default: "Midway Chimney & Masonry",
+    template: "%s | Midway Chimney & Masonry",
+  },
   description: "South Side Chicago chimney and masonry specialists.",
 }
 
