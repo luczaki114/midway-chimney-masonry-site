@@ -32,6 +32,13 @@ Three sources of UI guidance. They own different concerns — they don't compete
 **Build order:** shadcn primitive → skin with Midway tokens/recipes → if the shape is new, extend
 with the Frontend-Design skill, bounded by Midway. When in doubt on look, **Midway wins**.
 
+## Pull request conventions
+When opening a PR, always include `@claude[bot]` in the PR body to trigger the Claude PR Assistant review action. Example closing line:
+
+```
+@claude[bot] please review
+```
+
 ## Playwright artifacts
 Save all screenshots and snapshots to `.playwright-mcp/` by passing an explicit filename — e.g. `.playwright-mcp/hero-mobile.png`. Never save to the project root.
 
