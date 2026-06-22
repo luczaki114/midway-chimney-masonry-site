@@ -10,8 +10,9 @@
 /.agents/skills/*
 !/.agents/skills/midway-chimney-masonry-design/
 
-# local Claude Code settings and skill cache
-.claude/
+# local Claude Code settings (personal overrides) and transient worktrees
+.claude/settings.local.json
+.claude/worktrees/
 
 # Windows
 Thumbs.db
