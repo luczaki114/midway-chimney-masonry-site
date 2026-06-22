@@ -45,6 +45,8 @@ with the Frontend-Design skill, bounded by Midway. When in doubt on look, **Midw
 
 Always include `@claude[bot] please review` in the PR body to trigger the Claude review action.
 
+**Iterating on an open PR:** push additional commits to the same branch — do not open a new PR. The existing PR updates automatically. Only open a new PR when the scope is genuinely different.
+
 ## Playwright artifacts
 Save all screenshots and snapshots to `.playwright-mcp/` by passing an explicit filename — e.g. `.playwright-mcp/hero-mobile.png`. Never save to the project root.
 
