@@ -223,7 +223,7 @@ export default function Home() {
       </section>
 
       {/* ── Bottom CTA ── light */}
-      <section className="bg-off-white">
+      <section id="contact" className="bg-off-white">
         <div className={SECTION}>
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="flex flex-col gap-4">
