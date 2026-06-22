@@ -29,5 +29,21 @@
       "mcp__plugin_playwright_playwright__browser_type",
       "mcp__plugin_playwright_playwright__browser_wait_for"
     ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "if": "Bash(git *)",
+            "statusMessage": "Checking branch protection...",
+            "command": "cmd=$(node -e \"let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>process.stdout.write((JSON.parse(d).tool_input||{}).command||''))\"); deny=\"\"; if echo \"$cmd\" | grep -qE '^git commit'; then branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); [ \"$branch\" = \"master\" ] && deny=1; elif echo \"$cmd\" | grep -qE '^git push'; then if echo \"$cmd\" | grep -qE '\\bmaster\\b'; then deny=1; elif [ \"$(git rev-parse --abbrev-ref HEAD 2>/dev/null)\" = \"master\" ] && ! echo \"$cmd\" | grep -q \"/\"; then deny=1; fi; fi; if [ -n \"$deny\" ]; then printf '{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Direct commits/pushes to master are blocked. All changes must go through a PR branch.\"}}'; fi"
+          }
+        ]
+      }
+    ]
   }
 }
