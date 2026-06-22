@@ -32,12 +32,18 @@ Three sources of UI guidance. They own different concerns — they don't compete
 **Build order:** shadcn primitive → skin with Midway tokens/recipes → if the shape is new, extend
 with the Frontend-Design skill, bounded by Midway. When in doubt on look, **Midway wins**.
 
-## Pull request conventions
-When opening a PR, always include `@claude[bot]` in the PR body to trigger the Claude PR Assistant review action. Example closing line:
+## Branch and PR workflow
 
-```
-@claude[bot] please review
-```
+`master` is protected on GitHub — no direct pushes or commits are allowed. All changes must go through a pull request.
+
+**The only permitted workflow:**
+1. `git fetch origin && git checkout -b your-branch-name origin/master`
+2. Make changes, commit locally
+3. `git push -u origin your-branch-name`
+4. `gh pr create --base master ...`
+5. `gh pr merge --auto --merge <PR-number>` — queues the PR to merge automatically once required checks pass
+
+Always include `@claude[bot] please review` in the PR body to trigger the Claude review action.
 
 ## Playwright artifacts
 Save all screenshots and snapshots to `.playwright-mcp/` by passing an explicit filename — e.g. `.playwright-mcp/hero-mobile.png`. Never save to the project root.
