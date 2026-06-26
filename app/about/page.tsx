@@ -63,36 +63,32 @@ export default function AboutPage() {
       {/* ── Section 2: The Story ── light */}
       <section className="bg-off-white">
         <div className={SECTION}>
-          <div className="grid md:grid-cols-[280px_1fr] gap-12 items-start">
-            <div>
-              <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
-                Where we come from
-              </span>
-              <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black mt-3 text-balance">
-                The story
-              </h2>
-            </div>
-            <div className="flex flex-col gap-6 max-w-[620px]">
-              <p className="font-sans text-base leading-[1.6] text-body">
-                We started this business near Midway Airport because this is where we&rsquo;re from.
-                The South Side is our home — these are our neighbors, our blocks, our brick. When we
-                clean a chimney in Beverly or repoint a three-flat in Bridgeport, we&rsquo;re not
-                driving in from the suburbs. We live here.
-              </p>
-              <p className="font-sans text-base leading-[1.6] text-body">
-                Midway Chimney &amp; Masonry grew out of a simple idea: that homeowners deserve a
-                contractor who tells them the truth, shows up when they say they will, and charges a
-                fair price. Over 25 years, that idea hasn&rsquo;t changed. The work has gotten
-                bigger — we&rsquo;ve taken on full chimney rebuilds, I-beam replacements, shelf
-                angle work on older three-flats — but the way we do business is exactly the same.
-              </p>
-              <p className="font-sans text-base leading-[1.6] text-body">
-                We&rsquo;ve cleaned chimneys in Beverly and Bridgeport. We&rsquo;ve repointed
-                brickwork in Oak Lawn and Orland Park. We&rsquo;ve replaced I-beams and shelf
-                angles on three-flats in the near South Side. We&rsquo;ve done it all under one
-                name, with the same family doing the work — no subcontractors, no call centers.
-              </p>
-            </div>
+          <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
+            Where we come from
+          </span>
+          <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black mt-3 mb-10 max-w-[560px] text-balance">
+            The story
+          </h2>
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-6 max-w-[960px]">
+            <p className="font-sans text-base leading-[1.6] text-body">
+              We started this business near Midway Airport because this is where we&rsquo;re from.
+              The South Side is our home — these are our neighbors, our blocks, our brick. When we
+              clean a chimney in Beverly or repoint a three-flat in Bridgeport, we&rsquo;re not
+              driving in from the suburbs. We live here.
+            </p>
+            <p className="font-sans text-base leading-[1.6] text-body">
+              Midway Chimney &amp; Masonry grew out of a simple idea: that homeowners deserve a
+              contractor who tells them the truth, shows up when they say they will, and charges a
+              fair price. Over 25 years, that idea hasn&rsquo;t changed. The work has gotten
+              bigger — we&rsquo;ve taken on full chimney rebuilds, I-beam replacements, shelf
+              angle work on older three-flats — but the way we do business is exactly the same.
+            </p>
+            <p className="font-sans text-base leading-[1.6] text-body md:col-span-2 max-w-[620px]">
+              We&rsquo;ve cleaned chimneys in Beverly and Bridgeport. We&rsquo;ve repointed
+              brickwork in Oak Lawn and Orland Park. We&rsquo;ve replaced I-beams and shelf
+              angles on three-flats in the near South Side. We&rsquo;ve done it all under one
+              name, with the same family doing the work — no subcontractors, no call centers.
+            </p>
           </div>
         </div>
       </section>
@@ -102,13 +98,13 @@ export default function AboutPage() {
         className="relative bg-cover bg-center"
         style={{ backgroundImage: "url('/structural-steel-brick-repair.jpg')" }}
       >
-        <div className="absolute inset-0 bg-near-black/50" />
+        <div className="absolute inset-0 bg-near-black/65" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 py-24 md:py-32">
           <div className="max-w-[720px] mx-auto text-center">
-            <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-off-white/85">
+            <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-off-white">
               No subcontractors. No call centers.
             </span>
-            <p className="font-display font-normal text-[36px] leading-[1.2] text-off-white mt-5 text-balance">
+            <p className="font-display font-normal text-[44px] leading-[1.15] text-off-white mt-5 text-balance">
               The same family doing the work, under one name, for over 25 years.
             </p>
           </div>
@@ -154,11 +150,11 @@ export default function AboutPage() {
         className="relative bg-cover bg-center"
         style={{ backgroundImage: "url('/chimney-rebuild-caps.jpg')" }}
       >
-        <div className="absolute inset-0 bg-near-black/55" />
+        <div className="absolute inset-0 bg-near-black/65" />
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 py-14 md:py-24">
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-3">
-              <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-off-white/85">
+              <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-off-white">
                 Credentials
               </span>
               <h2 className="font-display font-bold text-[36px] leading-[1.1] text-off-white text-balance">
