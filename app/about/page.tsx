@@ -66,7 +66,7 @@ export default function AboutPage() {
           <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
             Where we come from
           </span>
-          <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black mt-3 mb-10 max-w-[560px] text-balance">
+          <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black mt-3 mb-12 max-w-[560px] text-balance">
             The story
           </h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-[960px]">
