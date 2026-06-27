@@ -69,7 +69,7 @@ export default function AboutPage() {
           <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black mt-3 mb-10 max-w-[560px] text-balance">
             The story
           </h2>
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-6 max-w-[960px]">
+          <div className="grid md:grid-cols-2 gap-6 max-w-[960px]">
             <p className="font-sans text-base leading-[1.6] text-body">
               We started this business near Midway Airport because this is where we&rsquo;re from.
               The South Side is our home — these are our neighbors, our blocks, our brick. When we
