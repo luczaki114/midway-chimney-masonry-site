@@ -63,12 +63,15 @@ export default function AboutPage() {
       {/* ── Section 2: The Story ── light */}
       <section className="bg-off-white">
         <div className={SECTION}>
-          <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
-            Where we come from
-          </span>
-          <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black mt-3 mb-12 max-w-[560px] text-balance">
-            The story
-          </h2>
+          <div className="flex flex-col gap-12">
+          <div>
+            <span className="font-sans font-light text-xs uppercase tracking-eyebrow text-mid-gray">
+              Where we come from
+            </span>
+            <h2 className="font-display font-bold text-[36px] leading-[1.1] text-near-black mt-3 max-w-[560px] text-balance">
+              The story
+            </h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-[960px]">
             <p className="font-sans text-base leading-[1.6] text-body">
               We started this business near Midway Airport because this is where we&rsquo;re from.
@@ -89,6 +92,7 @@ export default function AboutPage() {
               angles on three-flats in the near South Side. We&rsquo;ve done it all under one
               name, with the same family doing the work — no subcontractors, no call centers.
             </p>
+          </div>
           </div>
         </div>
       </section>
